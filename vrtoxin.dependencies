@@ -4,5 +4,29 @@
     "repository": "android_kernel_moto_shamu",
     "target_path": "kernel/moto/shamu",
     "revision": "M"
+  },
+  {
+    "remote": "github",
+    "repository": "neobuddy89/shamu",
+    "target_path": "kernel/moto/shamu-HY",
+    "revision": "marshmallow"
+  },
+  {
+    "remote": "github",
+    "repository": "TheMuppets/proprietary_vendor_motorola",
+    "target_path": "vendor/motorola",
+    "revision": "cm-13.0"
+  },
+  {
+    "remote": "bb",
+    "repository": "UBERTC/arm-eabi-4.9",
+    "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-4.9-UB",
+    "revision": "master"
+  },
+  {
+    "remote": "bb",
+    "repository": "UBERTC/arm-linux-androideabi-4.9",
+    "target_path": "prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9-UB",
+    "revision": "master"
   }
 ]

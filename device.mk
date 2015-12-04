@@ -18,6 +18,7 @@
 # are also specific to shamu devices
 #
 # Everything in this directory will become public
+# Base modules (will move elsewhere, previously user tagged)
 
 
 PRODUCT_COPY_FILES += \
@@ -101,12 +102,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/moto/shamu/spn-conf.xml:system/etc/spn-conf.xml
 
-# This device is 560dpi.  However the platform doesn't
-# currently contain all of the bitmaps at 560dpi density so
+# This device is 480dpi.  However the platform doesn't
+# currently contain all of the bitmaps at 480dpi density so
 # we do this little trick to fall back to the xxhdpi version
-# if the 560dpi doesn't exist.
+# if the 480dpi doesn't exist.
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := 560dpi
+PRODUCT_AAPT_PREF_CONFIG := 480dpi
 # A list of dpis to select prebuilt apk, in precedence order.
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
@@ -116,6 +117,7 @@ DEVICE_PACKAGE_OVERLAYS := \
     device/moto/shamu/overlay
 
 PRODUCT_PACKAGES := \
+	OmniSwitch \
     libwpa_client \
     hostapd \
     dhcpcd.conf \
@@ -217,7 +219,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560
+    ro.sf.lcd_density=480
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true

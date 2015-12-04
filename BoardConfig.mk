@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm
@@ -26,6 +25,20 @@ TARGET_NO_BOOTLOADER := true
 TARGET_KERNEL_CONFIG := shamu_defconfig
 TARGET_KERNEL_SOURCE := kernel/moto/shamu
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+
+# VRToxin Build Flags
+TARGET_VRTOXIN_ROM := 4.9
+TARGET_NDK_VRTOXIN_ROM := 4.9
+TARGET_VRTOXIN_ARM := 4.8
+STRICT_ALIASING := false
+CLANG_O3 := false
+GRAPHITE_OPTS := false
+USE_O3_OPTIMIZATIONS := false
+OFAST_OPTS := false
+ENABLE_GCCONLY := false
+KRAIT_TUNINGS := false
+FLOOP_NEST_OPTIMIZE := false
+USE_PIPE := false
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE :=  2048
@@ -147,9 +160,7 @@ BOARD_HARDWARE_CLASS := \
 
 USE_CLANG_PLATFORM_BUILD := true
 
-# Toolchain Flags
-TARGET_VRTOXIN_ROM := 4.9
-TARGET_NDK_VRTOXIN_ROM := 4.9
-TARGET_VRTOXIN_ARM := 4.8
+# Block based building
+BLOCK_BASED_OTA=false
 
 -include vendor/motorola/shamu/BoardConfigVendor.mk

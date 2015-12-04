@@ -18,7 +18,7 @@ PRODUCT_NAME := vrtoxin_shamu
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6
 
-TARGET_VENDOR := moto
+TARGET_VENDOR := motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=shamu \
