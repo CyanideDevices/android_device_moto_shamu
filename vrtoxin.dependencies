@@ -49,7 +49,7 @@
   },
  {
     "remote": "bb",
-    "repository": "xanaxdroid/arm-eabi-5.2-SM",
+    "repository": "xanaxdroid/arm-eabi-5.2",
     "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-5.2-SM",
     "revision": "sabermod"
   },
