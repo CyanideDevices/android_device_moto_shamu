@@ -22,14 +22,14 @@ TARGET_CPU_VARIANT := krait
 TARGET_NO_BOOTLOADER := true
 
 # Inline kernel building
-TARGET_KERNEL_CONFIG := hydra_shamu_defconfig
-TARGET_KERNEL_SOURCE := kernel/moto/shamu-HY
+TARGET_KERNEL_CONFIG := shamu_defconfig
+TARGET_KERNEL_SOURCE := kernel/moto/shamu
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 # VRToxin Build Flags
-TARGET_VRTOXIN_ROM := 4.9-SM
+TARGET_VRTOXIN_ROM := 4.9
 TARGET_NDK_VRTOXIN_ROM := 4.9
-TARGET_VRTOXIN_ARM := 5.2-SM
+TARGET_VRTOXIN_ARM := 4.8
 STRICT_ALIASING := false
 CLANG_O3 := false
 GRAPHITE_OPTS := false
@@ -161,6 +161,6 @@ BOARD_HARDWARE_CLASS := \
 USE_CLANG_PLATFORM_BUILD := true
 
 # Block based building
-BLOCK_BASED_OTA=false
+BLOCK_BASED_OTA := false
 
 -include vendor/motorola/shamu/BoardConfigVendor.mk
