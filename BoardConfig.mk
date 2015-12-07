@@ -26,6 +26,9 @@ TARGET_KERNEL_CONFIG := shamu_defconfig
 TARGET_KERNEL_SOURCE := kernel/moto/shamu
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
+# Block based building
+BLOCK_BASED_OTA := true
+
 # VRToxin Build Flags
 TARGET_VRTOXIN_ROM := 4.9
 TARGET_NDK_VRTOXIN_ROM := 4.9
@@ -159,8 +162,5 @@ BOARD_HARDWARE_CLASS := \
     device/moto/shamu/cmhw
 
 USE_CLANG_PLATFORM_BUILD := true
-
-# Block based building
-BLOCK_BASED_OTA := false
 
 -include vendor/motorola/shamu/BoardConfigVendor.mk
