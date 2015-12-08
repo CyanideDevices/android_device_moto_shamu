@@ -11,7 +11,6 @@ $(call inherit-product, vendor/vrtoxin/config/nfc_enhanced.mk)
 # Inherit device configuration
 $(call inherit-product, device/moto/shamu/aosp_shamu.mk)
 
-#DEVICE_PACKAGE_OVERLAYS += device/moto/shamu/overlay-vrtoxin
 DEVICE_PACKAGE_OVERLAYS += device/moto/shamu/overlay-cm
 
 ## Device identifier. This must come after all inclusions
