@@ -104,6 +104,15 @@
     <string-array name="config_disabledUntilUsedPreinstalledCarrierApps">
         <item>com.google.android.apps.tycho</item>
     </string-array>
+
+<!-- Specifies whether the dreams feature should be supported -->
++    <bool name="config_dreamsSupported">true</bool>
++
++    <!-- If supported, are dreams enabled? (by default) -->
++    <bool name="config_dreamsEnabledByDefault">true</bool>
++
++    <!-- Doze: force using accelerometer as pick up sensor -->
++    <bool name="config_dozeUseAccelerometer">true</bool>
 	
 	<!-- Set proximity sensor to on and make option available in Advanced Settings menu-->
     <bool name="config_proximityCheckOnWake">true</bool>
