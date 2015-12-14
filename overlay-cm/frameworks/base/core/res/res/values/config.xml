@@ -113,6 +113,13 @@
 
     <!-- Doze: force using accelerometer as pick up sensor -->
     <bool name="config_dozeUseAccelerometer">true</bool>
+
+	<!-- If supported and enabled, are dreams activated when asleep and charging? (by default) -->
+	<bool name="config_dreamsActivatedOnSleepByDefault">true</bool>
+
+    <!-- If true, the doze component is not started until after the screen has been
+         turned off and the screen off animation has been performed. -->
+    <bool name="config_dozeAfterScreenOff">true</bool>
 	
 	<!-- Set proximity sensor to on and make option available in Advanced Settings menu-->
     <bool name="config_proximityCheckOnWake">true</bool>
