@@ -1,5 +1,0 @@
-[gerrit]
-host=vrtoxin.net:8080/
-port=29418
-project=android_device_moto_shamu.git
-defaultbranch=M
