@@ -32,7 +32,7 @@ BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BLOCK_BASED_OTA := true
 
 #Install Layers Manager
-VRTOXIN_LAYERS := 1
+#VRTOXIN_LAYERS := 1
 
 # VRToxin Build Flags
 TARGET_VRTOXIN_ROM := 4.9
