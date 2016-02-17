@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm
@@ -37,6 +38,9 @@ BLOCK_BASED_OTA := true
 TARGET_VRTOXIN_ROM := 4.9
 TARGET_NDK_VRTOXIN_ROM := 4.9
 TARGET_VRTOXIN_ARM := 4.8
+
+#Include KernelAdiutor
+KERNEL_APP := true
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE :=  2048
