@@ -34,10 +34,10 @@ BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 # Block based building
 BLOCK_BASED_OTA := true
 
-# VRToxin Build Flags
-TARGET_VRTOXIN_ROM := 4.9
-TARGET_NDK_VRTOXIN_ROM := 4.9
-TARGET_VRTOXIN_ARM := 4.8
+# Cyanide Build Flags
+TARGET_CYANIDE_ROM := 4.9
+TARGET_NDK_CYANIDE_ROM := 4.9
+TARGET_CYANIDE_ARM := 4.8
 
 #Include KernelAdiutor
 KERNEL_APP := true

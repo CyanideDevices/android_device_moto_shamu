@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo vrtoxin_shamu-userdebug
+add_lunch_combo cyanide_shamu-userdebug
