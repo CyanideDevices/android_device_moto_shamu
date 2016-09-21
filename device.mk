@@ -135,6 +135,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    librmnetctl \
     libxml2
 
 # Live Wallpapers
@@ -168,6 +169,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.monitorRotation=true
 
+# Store correct IMSI when retreived from SIMRecords and use it for RuimRecords
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.get_imsi_from_sim=true
+
 # Audio effects
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
@@ -176,6 +181,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libqomx_core \
+    libmm-qcamera \
     libmmcamera_interface \
     libmmjpeg_interface \
     camera.msm8084 \
@@ -197,8 +203,8 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 # for launcher layout
-PRODUCT_PACKAGES += \
-    ShamuLayout
+#PRODUCT_PACKAGES += \
+#    ShamuLayout
 
 PRODUCT_PACKAGES += \
     bdAddrLoader
@@ -215,6 +221,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true
 
+# WiFi calling
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.iwlan.enable=true \
+    persist.radio.ignore_ims_wlan=1 \
+    persist.radio.data_con_rprt=1
+
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 
@@ -223,7 +235,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=1 \
     persist.radio.data_no_toggle=1 \
     persist.radio.sib16_support=1 \
-    persist.data.qmi.adb_logmask=0
+    persist.data.qmi.adb_logmask=0 \
+    persist.radio.alt_mbn_name=tmo_alt.mbn
 
 #Reduce IMS logging
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -236,7 +249,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.ISP.debug.mask=0 \
     persist.camera.pproc.debug.mask=7 \
     persist.camera.stats.debug.mask=0 \
-    persit.camera.imglib.logs=1 \
+    persist.camera.imglib.logs=1 \
     persist.camera.mct.debug.mask=1 \
     persist.camera.sensor.debug=0 \
     vidc.debug.level=1
@@ -261,6 +274,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.fsg_reload_on=1 \
     persist.radio.mcfg_enabled=1
+
+# Allow tethering without provisioning app
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.tethering.noprovisioning=true
 
 # Camera configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

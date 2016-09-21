@@ -236,6 +236,11 @@ on boot
     chown media media /sys/devices/c55_ctrl/gpio_core/value
     chown media media /sys/devices/c55_ctrl/gpio_reset/value
 
+# LED permissions
+    chmod 664 /sys/class/leds/red/brightness
+    chmod 664 /sys/class/leds/green/brightness
+    chmod 664 /sys/class/leds/blue/brightness
+
 # subsystem ramdump collection
 on property:persist.sys.qc.sub.rdump.on=*
     write /sys/module/subsystem_restart/parameters/enable_ramdumps ${persist.sys.qc.sub.rdump.on}
@@ -440,9 +445,8 @@ service adspd /system/bin/adspd /dev/ttyHS3
 
 on property:sys.boot_completed=1
     start qcom-post-boot
-
-on property:ro.debuggable=1
-    start ss_ramdump
+#on property:ro.debuggable=1
+#    start ss_ramdump
 
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
@@ -529,7 +533,6 @@ service bugreport /system/bin/dumpstate -d -p -B -z \
     class main
     disabled
     oneshot
-    keycodes 114 115 116
 
 service mdm_helper_proxy /system/bin/mdm_helper_proxy
     class core
