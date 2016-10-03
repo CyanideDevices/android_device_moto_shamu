@@ -167,11 +167,12 @@ PRODUCT_PACKAGES += \
     libaudio-resampler
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    media.aac_51_output_enabled=true \
+    persist.audio.dualmic.config=endfire \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker= false \
     ro.audio.monitorRotation=true
-
-# Store correct IMSI when retreived from SIMRecords and use it for RuimRecords
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.get_imsi_from_sim=true
 
 # Audio effects
 PRODUCT_PACKAGES += \
