@@ -166,12 +166,17 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libaudio-resampler
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.aac_51_output_enabled=true \
+# Set correct voice call audio property values
++PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.vc_call_vol_steps=6 \
     persist.audio.dualmic.config=endfire \
+    ro.qc.sdk.audio.fluencetype=fluence \
     persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicecomm=false \
     persist.audio.fluence.voicerec=false \
-    persist.audio.fluence.speaker= false \
+    persist.audio.fluence.speaker=false
+
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.monitorRotation=true
 
 # Audio effects
