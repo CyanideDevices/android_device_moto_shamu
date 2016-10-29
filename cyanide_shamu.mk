@@ -28,9 +28,9 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 TARGET_VENDOR := moto
 
 # Kernel inline build
-KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(strip $(HOST_OS))-x86/arm/arm-eabi-4.8/bin/"
-TARGET_KERNEL_SOURCE := kernel/moto/shamu
-TARGET_KERNEL_CONFIG := shamu_defconfig
+#KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(strip $(HOST_OS))-x86/arm/arm-eabi-4.8/bin/"
+#TARGET_KERNEL_SOURCE := kernel/moto/shamu
+#TARGET_KERNEL_CONFIG := shamu_defconfig
 #TARGET_VARIANT_CONFIG := shift_defconfig
 #TARGET_SELINUX_CONFIG := shift_defconfig
 
